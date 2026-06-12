@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+
+    <title>Product-cart-2</title>
+  </head>
+  <body class="bg-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 mt-2">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-header text-center bg-warning">
+                <i class="fa-solid fa-store"></i><strong>Shopping Cart</strong>
+              </div>
+            </div>
+            <div class="card-body">
+              <form action="" id="productCart">
+                <div class="form-group">
+                  <div>
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" />
+                  </div>
+                  <div>
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" id="price" />
+                  </div>
+                  <div>
+                    <label for="description">Descreption</label>
+                    <input type="text" class="form-control" id="description" />
+                  </div>
+                  <div>
+                    <label for="category">Category</label>
+                    <input type="text" class="form-control" id="category" />
+                  </div>
+                  <div>
+                    <label for="image">Image</label>
+                    <input type="text" class="form-control" id="image" />
+                  </div>
+
+                  <button
+                    class="mt-2 btn btn-primary btn-sm btn-block"
+                    id="butEdit"
+                  >
+                    Submit
+                  </button>
+
+                  <button
+                    class="mt-2 btn d-none btn-primary btn-sm btn-block"
+                    id="updatebtn"
+                  >
+                    Update
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="cardContainer">
+        <!-- <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <img src="" alt="" />
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-light border border-primary btn-sm m-2">
+                Add-Cart
+              </button>
+              <button class="btn btn-light btn-sm border border-danger m-2">
+                Remove-Product
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/JS/app.js"></script>
+  </body>
+</html>
