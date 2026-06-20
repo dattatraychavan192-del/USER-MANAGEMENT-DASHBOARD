@@ -107,7 +107,7 @@ function onSubmitCard(ele) {
               <div class="bg-primary text-center">${newObj.category}</div>
               <img class="mt-2" src="${newObj.image}" alt="" />
             </div>
-            <div class="d-flex justify-content-between">
+            <div class=" card-footer d-flex justify-content-between">
             <button class="btn btn-warning btn-sm"  id="edit" onclick="onEdit(this)">Edit</button>
             <button class="btn btn-danger btn-sm"  id="delete" onclick="onremove(this)">Delete</button>
             </div>
@@ -184,20 +184,15 @@ function onUpdate() {
         <div class="card h-100">
         <div class="card-header"><h2>${updatedObj.title}</h2></div>
           <div class="card-body">
-            <div>
-            <div>${updatedObj.description}</div>
-            <div calass="mt-2" ><p class="font-weight-bold">${updatedObj.price}</p></div>
-           
-            <div>${updatedObj.category}</div>
-           <img src="${updatedObj.image}" class="img-fluid" alt="">
-
+              <div>${updatedObj.description}</div>
+              <div calass="mt-2" ><p class="font-weight-bold">${updatedObj.price}</p></div>
+              <div>${updatedObj.category}</div>
+              <img src="${updatedObj.image}" class="img-fluid" alt="">
+          </div>
+            <div class="card-footer d-flex justify-content-between">
+              <button class="btn btn-warning btn-sm"  id="edit" onclick="onEdit(this)">Edit</button>
+              <button class="btn btn-danger btn-sm"  id="delete" onclick="onremove(this)">Delete</button>
             </div>
-          </div>
-          <div class="card-footer d-flex justify-content-between" >
-            <button class="btn btn-light border border-primary btn-sm" onclick="onEdit(this)">Change-Cart </button>
-            <button class="btn btn-light border border-danger btn-sm" onclick="onDelete(this)">Delete</button>
-          </div>
-       </div>
         </div>`;
 
       butEdit.classList.remove("d-none");
@@ -242,15 +237,13 @@ function onremove(ele) {
         if (xhr.status >= 200 && xhr.status < 300) {
           ele.closest(".col-md-4 ").remove();
           spinner.classList.add("d-none");
-          Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success",
-            timer: 2000,
-          });
+          snackbar("Product delete successfully.", "success");
         }
       };
+    } else {
+      snackbar("Something wents wrong.", "error");
     }
+    spinner.classList.add("d-none");
   });
 }
 
